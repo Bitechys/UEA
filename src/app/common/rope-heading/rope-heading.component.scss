@@ -1,0 +1,22 @@
+@import "../../../varcolor.scss";
+
+.rope-pos{   
+    position: absolute;
+    top: 10px;
+    left: -150%;
+    // min-width: 1200px !important;
+    max-height: 20px;
+    display: flex;
+    z-index: 0;
+}
+
+h2{
+    z-index: 2 !important;
+    position: relative;
+    border-left: 2px solid $primary;
+    border-right: 2px solid $primary;
+    // background-color: $primary_two;
+    padding: 5px 15px;
+    // border-radius: 10px;
+    margin: 0% !important;
+}

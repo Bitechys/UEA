@@ -1,0 +1,20 @@
+@import "../../../varcolor.scss";
+
+.logo{
+    max-width: 70px;
+}
+
+.main-logo{
+    // border: 2px solid $primary;
+    // max-width: fit-content;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+svg path {
+    fill: $primary
+}
+
+svg use {
+  fill: $primary !important;
+}

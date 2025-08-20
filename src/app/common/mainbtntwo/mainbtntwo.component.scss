@@ -1,0 +1,129 @@
+
+@import "../../../varcolor.scss";
+
+//button
+
+/* From Uiverse.io by Li-Deheng */ 
+.btn-conteiner {
+    width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+//   --color-text: #ffffff;
+  --color-shadow: #00000080;
+  cursor: pointer;
+}
+
+.main-txt{
+    font-weight: 600;
+
+    @include md {
+      font-weight: 90%;
+    }
+}
+
+.btn-content {
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 600;
+//   font-size: 30px;
+  color: $primary;
+  background: $white;
+  transition: 1s;
+  border-radius: 50%;
+  // box-shadow: 0 0 0.2em 0 $primary_two
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ svg path {
+  fill: $primary;
+}
+}
+
+.btn-conteiner:hover .btn-content, .btn-conteiner:focus .btn-content {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 $primary_two;
+  background: $primary;
+  color: #fff;
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-conteiner:hover .btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 10px;
+}
+
+.icon-arrow {
+  width: 20px;
+//   margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-conteiner:hover .btn-content #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-conteiner:hover .btn-content #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-conteiner:hover .btn-content #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: $primary_two;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid $primary_two;
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid $primary_two;
+    outline-offset: 0;
+  }
+}
